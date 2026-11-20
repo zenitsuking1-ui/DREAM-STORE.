@@ -1,0 +1,27 @@
+DREAM STORE — ملف جاهز للرفع على Vercel
+========================================
+
+1) فكّ الـ ZIP فمجلد (مثال: dream-store).
+2) افتح terminal فداك المجلد:
+   npm i -g vercel
+   vercel login
+   vercel --prod
+3) من Vercel Dashboard:
+   Storage → Create Store → Blob → Private
+   وفعّل "Add a read-write token env var to this connection".
+4) Project Settings → Environment Variables:
+   SESSION_SECRET = قيمة عشوائية طويلة
+   ADMIN_USER = admin
+   ADMIN_PASSWORD = admin1234
+5) ارجع إلى Deployments → ⋮ → Redeploy.
+6) الرابط الدائم كيظهر لك بشكل تلقائي:
+   https://<اسم-المشروع>.vercel.app
+
+الدخول للأدمن: admin / admin1234
+زر ⋮ مزيد من الخيارات فالشريط العلوي كيدخل للإدارة (ماشي فالقائمة الرئيسية).
+
+التحقق:
+   https://<اسم-المشروع>.vercel.app/api/health
+وغادي يرجّع "storage": "vercel-blob".
+
+التفاصيل الكاملة فـ VERCEL.md داخل نفس الملف.
